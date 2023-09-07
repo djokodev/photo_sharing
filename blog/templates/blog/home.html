@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <div>
     {% for photo in photos %}
         <img src="{{ photo.image.url }}">
         <p>{{ photo.caption }}</p>
+        
     {% endfor %}
 </div>
 

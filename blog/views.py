@@ -1,7 +1,15 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_list_or_404
 from django.contrib.auth.decorators import login_required
 from . import forms
 from blog import models
+from blog.models import Photo
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+
+
+@login_required
+def like_photo(request, photo_id):
+   pass
 
 
 @login_required
