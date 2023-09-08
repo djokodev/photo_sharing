@@ -2,10 +2,12 @@
 {% load static %}
 {% block content %}
 
-<div>
+<div class="photo">
     {% for photo in photos %}
+    <div class="photo-item">
         <img src="{{ photo.image.url }}">
-        <p>{{ photo.caption }}</p>
+        <p class="descphoto">{{ photo.caption }}</p>
+    </div>
         
     {% endfor %}
 </div>

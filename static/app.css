@@ -1,0 +1,159 @@
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .photo img {
+    width: 400px;
+    height: 300px;
+    transition: transform 0.3s ease;
+  }
+
+  .photo img:hover {
+    transform: scale(1.1);
+  }
+
+  .photo .photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  
+
+
+
+
+.title {
+    text-align: center;
+    margin: 40px;
+  }
+
+.body {
+    background: #fadbfc;
+}
+
+
+
+
+
+.profil {
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 20px;
+  }
+  
+  .profil .nomuser {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .profil .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .profil a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .profil a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+  .containercon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+  }
+  
+  form {
+    width: 300px;
+    padding: 20px;
+    background-color: #f5fafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  form button {
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+
+
+  
+  
+  
+  .containerins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: -80px;
+  }
+  
+  .inscription {
+    width: 700px;
+    background-color: #f5fafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .inscription button {
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .inscription button:hover {
+    background-color: #45a049;
+  }
+  
+  .inscription p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .erreur {
+    color: red;
+    text-align: center;
+  }
