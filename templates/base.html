@@ -7,26 +7,9 @@
     </head>
     <body class="body">
 
-        <h1 class="title">Photo Sharing</h1>
+        <h1 class="title">Photo Sharing 🎈</h1>
 
-       <div class="container">
-        
-        <div class="profil">
-            {% if user.is_authenticated %}
-                <p class="nomuser">Salut, {{ user }} !</p>
-                {% if user.profile_photo %}
-                    <img class="avatar" src={{ user.profile_photo.url }}>
-                {% else %}
-                    <img class="avatar" src="{% static 'images/default_profile.png' %}">
-                {% endif %}
-                <p><a href="{% url 'home' %}">Accueil</a></p>
-                <p><a href="{% url 'photo_upload' %}">Publier une photo</a></p>
-                <p><a href="{% url 'upload_profile_photo' %}">Changer votre photo de profil</a></p>
-                <p><a href="{% url 'logout' %}">Se déconnecter</a></p>
-            {% endif %}
-
-        </div>
-     </div> 
+      
         {% block content %}{% endblock %}
  
 

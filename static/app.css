@@ -2,24 +2,23 @@
 .photo {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 50px;
+    
   }
   
-  .photo img {
-    width: 400px;
-    height: 300px;
+  .photo img {  
+    width: 500px;
+    height: 380px;
     transition: transform 0.3s ease;
   }
 
   .photo img:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
 
   .photo .photo-item {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 10px;
   }
 
   
@@ -27,9 +26,17 @@
 
 
 
-.title {
+  .title {
     text-align: center;
     margin: 40px;
+    font-family: 'Courier New', Courier, monospace; /* Remplacez 'YourFont' par la police stylée de votre choix */
+    animation: glowingText 2s ease-in-out infinite; /* Ajoutez cette ligne pour l'animation */
+  }
+  
+  @keyframes glowingText {
+    0% { color: #ff0000; } /* Remplacez #ff0000 par la couleur initiale de votre titre */
+    50% { color: #0026ff; } /* Remplacez #00ff00 par une couleur intermédiaire pour l'animation */
+    100% { color: #ff0000; } /* Remplacez #ff0000 par la couleur finale de votre titre */
   }
 
 .body {
@@ -41,26 +48,35 @@
 
 
 .profil {
-    background-color: #f7f7f7;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
     width: 300px;
-    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px gray;
+    margin: 30px;
+    padding: 15px;
+    min-width: 300px;
+    min-height: 400px;
+    float: left;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh;
+    
   }
   
   .profil .nomuser {
     margin-top: 0;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
   }
   
   .profil .avatar {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+   
   }
   
   .profil a {
