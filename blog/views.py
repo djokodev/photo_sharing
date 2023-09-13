@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,get_list_or_404
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from . import forms
 from blog import models
@@ -9,7 +9,15 @@ from django.http import HttpResponseRedirect
 
 @login_required
 def like_photo(request, photo_id):
-   pass
+   photo = get_object_or_404(Photo, id=photo_id)
+   user = request.user
+   
+   if user in photo.likes.all():
+       photo.likes.remove(user)
+   else:
+       photo.likes.add(user)
+       
+   return redirect("home")
 
 
 @login_required

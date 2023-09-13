@@ -30,7 +30,7 @@ urlpatterns = [
     path("home/", blog.views.home, name="home"),
     path('photo/upload/', blog.views.photo_upload, name='photo_upload'),
     path("profil-photo/upload_profile_photo", authentication.views.upload_profile_photo, name="upload_profile_photo"),
-    #path('like/<int:photo_id>/', blog.views.like_photo, name='like_photo'),
+    path('photo/<int:photo_id>/like/', blog.views.like_photo, name='like_photo'),
 ]   
 if settings.DEBUG:
     urlpatterns += static\

@@ -23,6 +23,12 @@
     <div class="photo-item">
         <img src="{{ photo.image.url }}">
         <p class="descphoto">{{ photo.caption }}</p>
+        
+        <form class="like" action="{% url 'like_photo' photo.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="like-button"><i class="fas fa-heart"></i></button>
+            <div class="like-count">{{ photo.likes.count }}</div>
+        </form>
     </div>
         
     {% endfor %}

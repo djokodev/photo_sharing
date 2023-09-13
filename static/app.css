@@ -173,3 +173,28 @@
     color: red;
     text-align: center;
   }
+
+
+
+
+
+  .like {
+    display: inline-block;
+    background-color: #fadbfc;
+  }
+
+  .like-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.like-count {
+    font-size: 15px;
+    color: #0e0d0d;
+    display: inline-block;
+    vertical-align: middle;
+}
