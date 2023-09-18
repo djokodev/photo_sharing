@@ -4,12 +4,46 @@
     
 <div class="containerins">
     {% if form.errors %}
-        {{ form.errors }}
+        <div class="erreur">{{ form.errors }}</div>
     {% endif %}
     <form class="inscription" method="post">
-        {{ form.as_p }}
         {% csrf_token %}
-        <button type="submit" >S’inscrire</button>
+
+        <div class="form-field">
+            <label for="{{ form.username.id_for_label }}">Nom d'utilisateur :</label>
+            {{ form.username }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.email.id_for_label }}">Adresse e-mail :</label>
+            {{ form.email }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.first_name.id_for_label }}">Prénom :</label>
+            {{ form.first_name }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.last_name.id_for_label }}">Nom :</label>
+            {{ form.last_name }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.password1.id_for_label }}">Mot de passe :</label>
+            {{ form.password1 }}
+        </div>
+
+        <div class="form-field">
+            <label for="{{ form.password2.id_for_label }}">Confirmer le mot de passe :</label>
+            {{ form.password2 }}
+        </div>
+
+        <button type="submit">S’inscrire</button>
+        <div class="inscriptext">
+            <p>Vous êtes déjà membre ? <a href="{% url 'login' %}">Connectez-vous</a></p>
+        </div>
     </form>
+   
 </div>
 {% endblock content %}

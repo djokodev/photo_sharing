@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from . import forms
 from blog import models
-from blog.models import Photo
+from blog.models import Photo, Comment
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 
@@ -18,6 +18,22 @@ def like_photo(request, photo_id):
        photo.likes.add(user)
        
    return redirect("home")
+
+
+
+@login_required
+def add_comment(request, photo_id):
+    photo = Photo.objects.get(id=photo_id)
+    
+    if request.method == "POST":
+        content = request.POST.get("comment")
+        
+        comment = Comment(photo=photo, user=request.user, content=content)
+        
+        comment.save()
+        
+    return redirect("home")
+
 
 
 @login_required

@@ -9,7 +9,7 @@
   
   .photo img {  
     width: 500px;
-    height: 380px;
+    height: 400px;
     transition: transform 0.3s ease;
   }
 
@@ -130,52 +130,73 @@
 
 
 
-
-  
-  
-  
   .containerins {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: -80px;
-  }
-  
-  .inscription {
-    width: 700px;
-    background-color: #f5fafa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-  }
-  
-  .inscription button {
-    margin-top: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .inscription button:hover {
-    background-color: #45a049;
-  }
-  
-  .inscription p {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .erreur {
-    color: red;
-    text-align: center;
-  }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fadbfc;
+    }
 
+    .inscription {
+        width: 500px;
+        background-color: white;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        padding: 40px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        
+    }
 
+    .form-field {
+        margin-bottom: 20px;
+    }
 
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #262626;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        font-size: 14px;
+        background-color: #fafafa;
+        color: #262626;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #3897f0;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #3578e5;
+    }
+
+    .erreur {
+        color: red;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+ 
+    .inscriptext {
+      margin-top: 10px;
+    }
 
 
   .like {
@@ -197,4 +218,22 @@
     color: #0e0d0d;
     display: inline-block;
     vertical-align: middle;
+}
+
+
+
+
+.add-comment {
+  max-width: 200px; /* Définir une largeur maximale pour limiter la taille du formulaire */
+  max-height: 120px;
+  float: right;
+}
+
+.add-comment .comment-section textarea {
+  width: 100%; /* Définir la largeur du champ de texte sur 100% pour occuper toute la largeur disponible */
+  resize: vertical; /* Permettre le redimensionnement vertical du champ de texte */
+}
+
+.add-comment .comment-section .comment-button {
+  margin-top: 2px; /* Ajouter une marge supérieure pour l'espace entre le champ de texte et le bouton */
 }
