@@ -1,4 +1,16 @@
 
+.publicationformulaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.publication-title {
+  text-align: center;
+}
+
+
 .photo {
     display: flex;
     flex-wrap: wrap;
@@ -40,9 +52,8 @@
   }
 
 .body {
-    background: #fadbfc;
+    background: #fceadb;
 }
-
 
 
 
@@ -237,3 +248,6 @@
 .add-comment .comment-section .comment-button {
   margin-top: 2px; /* Ajouter une marge supérieure pour l'espace entre le champ de texte et le bouton */
 }
+
+
+

@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Changer votre photo de profil</h2>
-    <form method="post" enctype="multipart/form-data">
-        {{ form.as_p }}
+
+<h2 class="publication-title">Changer votre photo de profil</h2>
+
+<div class="publicationformulaire">
+    
+    <form class="publication" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        {{ form.as_p }}
+       
         <button type="submit" >Enregister</button>
+        <p><a href="{% url 'home' %}">Retour</a></p>
     </form>
+</div>
 {% endblock content %}
